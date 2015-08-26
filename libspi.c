@@ -41,7 +41,7 @@ int libspi_init()
 	return fd;
 }
 
-int libspi_read(int fd, unsigned int reg, unsigned int* dat)
+int libspi_read(int fd, unsigned short reg, unsigned short* dat)
 {
 	int ret;
 	// cmd[16bits] data[16bits] data[16bits] data[16bits]
@@ -99,7 +99,7 @@ int libspi_read(int fd, unsigned int reg, unsigned int* dat)
 	return ret;
 }
 
-int libspi_write(int fd, unsigned int reg, unsigned int* dat)
+int libspi_write(int fd, unsigned short reg, unsigned short* dat)
 {
 	int ret;
 	// cmd[16bits] data[16bits] data[16bits] data[16bits]
